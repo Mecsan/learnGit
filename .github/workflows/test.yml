@@ -1,0 +1,13 @@
+name: First github action
+on: [push]
+jobs: 
+  build-project:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "hello world"
+      - run: echo "building project"
+  listing:
+    runs-on: ubuntu-latest
+    steps:
+      - ls -l
+ 
