@@ -9,5 +9,5 @@ jobs:
   listing:
     runs-on: ubuntu-latest
     steps:
-      - ls -l
+      - run: ls -l
  
