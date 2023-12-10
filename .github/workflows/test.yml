@@ -13,6 +13,7 @@ jobs:
       - name: building project
         run: |
           cd client
+          npm i
           npm run build
       - name : deploying project
         run: | 
