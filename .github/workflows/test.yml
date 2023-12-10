@@ -17,9 +17,8 @@ jobs:
           npm run build
       - name: deploying project
         env: 
-          token: {{ secrets.VERCEL_TOKEN }}
+          TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: | 
           npm i -g vercel
           vercel --version
           echo $token
- 
