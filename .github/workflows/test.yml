@@ -26,4 +26,4 @@ jobs:
           vercel pull --yes --token $VERCEL_TOKEN
           cd client
           vercel build
-          vercel deploy --prebuilt --yes --token $VERCEL_TOKEN
+          vercel deploy client --prebuilt --yes --token $VERCEL_TOKEN
