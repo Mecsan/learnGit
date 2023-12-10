@@ -1,17 +1,19 @@
 name: First github action
 on: [push]
 jobs: 
-  listing:
+  CD:
     runs-on: ubuntu-latest
     steps:
-      - name: "getting repo"
+      - name: Fetch
         uses: actions/checkout@v4
         with:
           ref: "githubAction"
-      - name: "listing files"
-        run: tree
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
-      - name : get version
-        run: node --version
+      - name: building project
+        run: npm run build
+      - name : deploying project
+        run: | 
+          npm i -g vercel
+          vercel --version
  
