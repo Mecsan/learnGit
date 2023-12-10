@@ -4,8 +4,11 @@ jobs:
   listing:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: tree
+      - name: "getting repo"
+        uses: actions/checkout@v4
+        with:
+          ref: "githubAction"
+        run: tree
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
       - name : get version
