@@ -24,4 +24,5 @@ jobs:
         run: | 
           npm i -g vercel
           vercel build
+          vercel pull --yes
           vercel deploy --prebuilt --yes --token $VERCEL_TOKEN
