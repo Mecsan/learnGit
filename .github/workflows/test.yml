@@ -17,7 +17,7 @@ jobs:
           npm run build
       - name : deploying project
         env: 
-          token: "fumk you"
+          token: {{ secrets.VERCEL_TOKEN }}
         run: | 
           npm i -g vercel
           vercel --version
