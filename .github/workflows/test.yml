@@ -27,5 +27,6 @@ jobs:
           mkdir .vercel
           touch project.json
           echo '{"projectId": "$VERCEL_PROJECT_ID","orgId": "$VERCEL_ORG_ID"}' > .vercel/project.json
+          tree
           vercel build
           vercel deploy --prebuilt --yes --token $VERCEL_TOKEN
