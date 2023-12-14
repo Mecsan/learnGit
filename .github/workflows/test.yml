@@ -18,15 +18,6 @@ jobs:
       - name: deploying project
         env: 
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
         run: | 
           npm i -g vercel
-          cd client
-          mkdir .vercel
-          touch project.json
-          echo '{"projectId": "$VERCEL_PROJECT_ID","orgId": "$VERCEL_ORG_ID"}' > .vercel/project.json
-          tree
-          vercel build
-          vercel deploy --prebuilt --yes --token $VERCEL_TOKEN
+          vercel deploy client
